@@ -92,3 +92,23 @@ fileNameTextBox.addEventListener('mouseout',changeBorderOnOut);
 const titleTextBox = document.getElementById('Title');
 titleTextBox.addEventListener('mouseover',changeBorderOnHover);
 titleTextBox.addEventListener('mouseout',changeBorderOnOut);
+
+const imageBox = document.querySelector('.image-box');
+
+function handleScrollAnimation(){
+    const rect = imageBox.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const progress = 1 - rect.top / windowHeight;
+
+    const clamped = Math.max(0, Math.min(progress, 1));
+
+    const startWidth = 360;
+    const endWidth = document.documentElement.clientWidth;
+
+    const newWidth = startWidth + (endWidth - startWidth) * clamped;
+
+    imageBox.style.width = newWidth + "px";
+}
+
+window.addEventListener('scroll', handleScrollAnimation);
+handleScrollAnimation();
