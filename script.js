@@ -88,6 +88,7 @@ formSubmitButton.addEventListener('click',getInput);
 const fileNameTextBox = document.getElementById('file-name');
 fileNameTextBox.addEventListener('mouseover',changeBorderOnHover);
 fileNameTextBox.addEventListener('mouseout',changeBorderOnOut);
+fileNameTextBox.addEventListener('change',()=>console.log("value changed in filename text box"));
 
 const titleTextBox = document.getElementById('Title');
 titleTextBox.addEventListener('mouseover',changeBorderOnHover);
