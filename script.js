@@ -1,10 +1,9 @@
-window.addEventListener("load", function(){
+function loadingFunction(){
     const loader = document.getElementById("loader");
+    setTimeout(()=>loader.classList.add("hide"), 500);
+}
 
-    setTimeout(() => {
-        loader.classList.add("hide");
-    }, 500);
-});
+window.addEventListener("load", loadingFunction());
 document.write(`<div id="welcome-msg">Welcome</div>`);
 var videoList = ['1.webm','2.webm','3.webm']
 var titleList = ['The Shining Moon','The Worlds end','The Destroyer'];
