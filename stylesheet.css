@@ -336,8 +336,14 @@ header{
     width: 100%;
     margin-top: 200px;
     align-items: center;
+    overflow: hidden;
 }
-
+.sub-form-header{
+    display: flex;
+    width: 100%;
+    padding-left: 40px;
+    justify-content: space-around;
+}
 .sub-form form{
     display: flex;
     flex-direction: column;
@@ -368,4 +374,130 @@ header{
     color: white;
     border: 2px solid black;
     box-shadow: 0 0 15px white;
+}
+
+/*FOOTER SECTION*/
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    padding-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.footer h1{
+    color: white;
+    text-transform: uppercase;
+}
+.social-media-icons{
+    width:100%;
+}
+.social-media-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 37%;
+}
+.social-media-nav button{
+    appearance: none;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    font-size: 110%;
+    padding: 12px 14px;
+}
+#facebook{
+    background-color: rgb(0, 136, 255);
+    border: 1px solid rgb(0, 136, 255);
+    border-radius: 12px;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+#facebook:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 136, 255);
+    border-radius: 12px;
+}
+#x{
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+#x:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black
+}
+#instagram{
+    background-color: rgb(157, 0, 255);
+    border: 0px solid rgb(157, 0, 255);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#instagram:hover{
+    background-color: white;
+    color: rgb(157, 0, 255);
+}
+#yt{
+    background-color: rgb(255, 0, 0);
+    border: 0px solid rgb(255, 0, 0);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#yt:hover{
+    background-color: white;
+    color: rgb(255, 0, 0);
+}
+#discord{
+    background-color: rgb(68, 121, 255);
+    border: 0px solid rgb(68, 121, 255);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+#discord:hover{
+    background-color: white;
+    color: rgb(68, 121, 255);
+}
+#reddit{
+    background-color: rgb(255, 77, 0);
+    border: 1px solid rgb(255, 77, 0);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+#reddit:hover{
+    background-color: white;
+    color: rgb(255, 77, 0);
+    border: 1px solid white;
+}
+
+.logo-marks{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    margin: 50px 0px;
+}
+
+.logo-marks img{
+    width: 300px;
+    cursor: pointer;
+}
+.footer-navlinks{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 200px;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    color: grey;
+}
+.footer-navlinks a{
+    text-decoration: none;
+    color: grey;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.footer-navlinks a:hover{
+    color: white;
 }
