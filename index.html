@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gaming Website</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="head-left">
+                    <a href="#">&#8942; <i class="fa fa-external-link"></i></a>
+                </div>
+                    <img src="newlogo.png" id="logo">
+                <div class="head-right">
+                    <nav>
+                        <a href="#">News</a>
+                        <a href="#">Events</a>
+                        <a href="#">Merch</a>
+                        <a href="#">About</a>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="main-page">
+                <div class="main-vid">
+                    <video loop autoplay muted plays-inline class="main-video">
+                        <source src="1.webm">
+                    </video>
+                    <h3 id="video-name">The Shining Moon</h3>
+                    <div class="main-info">
+                        <h1>JOIN THE JOURNEY</h1>
+                        <p>Become the part of grand journey of changing the world and explore the diverse landscapes</p>
+                        <button>Watch Trailer</button>
+                    </div>
+                    <button id="next"><i class="fa-solid fa-angle-right" id="next"></i></button>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <p>Welcome to JOTF</p>
+                <h1>Experience an unforgettable journey</h1>
+                <div class="image-box autoTakeFull">
+                    <img src="journey-begin.jpg">
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h3>Into the Game</h3>
+                <div class="info-cards">
+                    <div class="card">
+                        <h1>Radiant</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <video src="1.webm" autoplay loop muted plays-inline></video>
+                        <button>Click Here</button>
+                    </div>
+                    <div class="card">
+                        <h1>Master</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <video src="2.webm" autoplay loop muted plays-inline></video>
+                        <button>Click Here</button>
+                    </div>
+                    <div class="card">
+                        <h1>Champion</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <video src="3.webm" autoplay loop muted plays-inline></video>
+                        <button>Click Here</button>
+                    </div>
+                    <div class="card">
+                        <h1>Diamond</h1>
+                        <video src="4.webm" autoplay loop muted plays-inline></video>
+                    </div>
+                    <div class="card">
+                        <h1>More coming soon</h1>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sub-form">
+                <form id="form">
+                    <table>
+                        <tr>
+                                <td><label>File Name:</label>
+                                <input type="text" id="file-name"></td>
+                                <td><label>Title:</label>
+                                <input type="text" id="Title"></td>
+                        </tr>
+                    </table>
+                    <button id="submission-button">Submit</button>
+                </form>
+                <ol id="current-files"></ol>
+            </section>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
