@@ -534,6 +534,10 @@ header{
 }
 
 @media screen and (max-width: 650px){
+    html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
     #welcome-msg{
         display: none;
     }
@@ -586,6 +590,13 @@ header{
     }
     #next{
         left: 80%;
+    }
+    .info-cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card:nth-child(2){
+        height: 40vh;
     }
     .card h1{
         font-size: 30px;
