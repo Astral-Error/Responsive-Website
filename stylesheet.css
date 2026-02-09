@@ -532,3 +532,86 @@ header{
 .footer-navlinks a:hover{
     color: white;
 }
+
+@media screen and (max-width: 650px){
+    #welcome-msg{
+        display: none;
+    }
+    #logo{
+        width: 100px;
+        position: relative;
+        left: 0;
+        transform: translateX(0%);
+        padding-left: 20px;
+    }
+    #logo{
+    cursor: pointer;
+    }
+    header{
+        height: 50px;
+        display: flex;
+    }
+    .head-left{
+        display: none;
+    }
+    .head-right{
+        width: 100%;
+        justify-content: end;
+    }
+    .head-right a{
+        font-size: 10px;
+    }
+    .main-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    .main-info p{
+        margin: 0px;
+    }
+    .main-info h1{
+        font-size: 40px;
+        margin: 0px;
+    }
+    #video-name{
+        font-size: 40px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        bottom: 5%;
+    }
+    #next{
+        left: 80%;
+    }
+    .card h1{
+        font-size: 30px;
+        padding-left: 10px;
+    }
+    .card p{
+        top: 60px;
+        left: 5%;
+    }
+    .sub-form td{
+        text-align: center;
+    }
+    .sub-form-header{
+        padding-left: 0px;
+    }
+    .social-media-nav{
+    padding: 0px 40px;
+    }
+    .footer-navlinks{
+        display: flex;
+        flex-direction: column;
+        padding: 0 0px;
+        align-items: center;
+        gap: 20px;
+    }
+    .footer-navlinks span{
+        display: none;
+    }
+}
