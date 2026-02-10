@@ -228,7 +228,7 @@ header{
     align-items: center;
     justify-content: center;
     margin: auto;
-    will-change: width;
+    will-change: width, height;
 }
 
 .image-box img{

@@ -103,18 +103,25 @@ titleTextBox.addEventListener('mouseout',changeBorderOnOut);
 const imageBox = document.querySelector('.image-box');
 
 function handleScrollAnimation(){
+
     const rect = imageBox.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    const progress = 1 - rect.top / windowHeight;
 
+    const progress = 1 - rect.top / windowHeight;
     const clamped = Math.max(0, Math.min(progress, 1));
 
     const startWidth = 360;
+    const startHeight = 510;
+
     const endWidth = document.documentElement.clientWidth;
 
-    const newWidth = startWidth + (endWidth - startWidth) * clamped;
+    const endHeight = window.innerHeight * 1.0;
 
-    imageBox.style.width = newWidth + "px";
+    const newWidth  = startWidth  + (endWidth  - startWidth)  * clamped;
+    const newHeight = startHeight + (endHeight - startHeight) * clamped;
+
+    imageBox.style.width  = newWidth  + "px";
+    imageBox.style.height = newHeight + "px";
 }
 
 window.addEventListener('scroll', handleScrollAnimation);
