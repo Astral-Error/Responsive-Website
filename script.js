@@ -19,6 +19,7 @@ function showCurrentlyAddedVideos(){
     document.getElementById('current-files').innerHTML=allData;
 }
 showCurrentlyAddedVideos();
+
 function changeVideo(){
     const videoElement = document.querySelector('.main-video');
     counter=(counter+1)%videoList.length;
@@ -85,23 +86,6 @@ function changeBorderOnOut(){
     this.style.boxShadow = '0 0';
 }
 
-const button = document.getElementById('next');
-button.addEventListener('click',callFunctions);
-
-const formSubmitButton = document.getElementById('submission-button');
-formSubmitButton.addEventListener('click',getInput);
-
-const fileNameTextBox = document.getElementById('file-name');
-fileNameTextBox.addEventListener('mouseover',changeBorderOnHover);
-fileNameTextBox.addEventListener('mouseout',changeBorderOnOut);
-fileNameTextBox.addEventListener('change',()=>console.log("value changed in filename text box"));
-
-const titleTextBox = document.getElementById('Title');
-titleTextBox.addEventListener('mouseover',changeBorderOnHover);
-titleTextBox.addEventListener('mouseout',changeBorderOnOut);
-
-const imageBox = document.querySelector('.image-box');
-
 function handleScrollAnimation(){
 
     const rect = imageBox.getBoundingClientRect();
@@ -124,12 +108,6 @@ function handleScrollAnimation(){
     imageBox.style.height = newHeight + "px";
 }
 
-window.addEventListener('scroll', handleScrollAnimation);
-handleScrollAnimation();
-
-const hamBtn = document.getElementById('ham');
-const menuBar = document.getElementById('ham-nav-menu');
-
 function makeMenuVisible(event){
     event.stopPropagation();
     menuBar.classList.toggle('open');
@@ -143,5 +121,28 @@ function closeMenu(event){
     }
 }
 
+const button = document.getElementById('next');
+button.addEventListener('click',callFunctions);
+
+const formSubmitButton = document.getElementById('submission-button');
+formSubmitButton.addEventListener('click',getInput);
+
+const fileNameTextBox = document.getElementById('file-name');
+fileNameTextBox.addEventListener('mouseover',changeBorderOnHover);
+fileNameTextBox.addEventListener('mouseout',changeBorderOnOut);
+fileNameTextBox.addEventListener('change',()=>console.log("value changed in filename text box"));
+
+const titleTextBox = document.getElementById('Title');
+titleTextBox.addEventListener('mouseover',changeBorderOnHover);
+titleTextBox.addEventListener('mouseout',changeBorderOnOut);
+
+const imageBox = document.querySelector('.image-box');
+
+window.addEventListener('scroll', handleScrollAnimation);
+handleScrollAnimation();
+
+const hamBtn = document.getElementById('ham');
+const menuBar = document.getElementById('ham-nav-menu');
+
 hamBtn.addEventListener('click',makeMenuVisible);
-document.addEventListener('click',closeMenu)
+document.addEventListener('click',closeMenu);
