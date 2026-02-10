@@ -80,7 +80,7 @@ header{
     justify-content: space-between;
     z-index: 999;
     background-color: rgba(50, 50, 50, 0.3);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     width:100%;
     height: 100px;
 }
@@ -127,6 +127,9 @@ header{
         0 0 40px #0ff;
 }
 .head-right-mobile{
+    display: none;
+}
+#ham-nav-menu{
     display: none;
 }
 #logo{
@@ -596,9 +599,28 @@ header{
         text-decoration: none;
         color: white;
         margin-top: 10px;
+        transition: 0.3s ease;
     }
     #ham-nav-menu.open{
         right: 0;
+    }
+    #ham-nav-menu a:hover{
+        text-shadow: 
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #0ff;
+    }
+    #ham-nav-menu h3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        margin: 0;
     }
     .main-info{
         display: flex;
