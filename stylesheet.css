@@ -80,8 +80,7 @@ header{
     justify-content: space-between;
     z-index: 999;
     background-color: rgba(50, 50, 50, 0.3);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(40px);
     width:100%;
     height: 100px;
 }
@@ -126,6 +125,9 @@ header{
         0 0 10px #fff,
         0 0 20px #fff,
         0 0 40px #0ff;
+}
+.head-right-mobile{
+    display: none;
 }
 #logo{
     width: 300px;
@@ -533,6 +535,7 @@ header{
     color: white;
 }
 
+/*OPTIMIZATIONS FOR MOBILE*/
 @media screen and (max-width: 650px){
     html, body {
         overflow-x: hidden;
@@ -555,15 +558,47 @@ header{
         height: 50px;
         display: flex;
     }
-    .head-left{
-        display: none;
+    .head-left a{
+        font-size: 10px;
     }
     .head-right{
-        width: 100%;
-        justify-content: end;
+        display: none;
     }
     .head-right a{
         font-size: 10px;
+    }
+    .head-right-mobile{
+        display: unset;
+    }
+    .head-right-mobile button{
+        appearance: none;
+        background: transparent;
+        color: white;
+        border: 0px;
+    }
+    #ham-nav-menu{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -50vw;
+        width: 50vw;
+        height: 100vh;
+        background-color: rgba(50, 50, 50, 0.25);
+        backdrop-filter: blur(20px);
+        transition: 0.3s;
+        align-items: center;
+        gap: 20px;
+        z-index: 1000;
+        color: white
+    }
+    #ham-nav-menu a{
+        text-decoration: none;
+        color: white;
+        margin-top: 10px;
+    }
+    #ham-nav-menu.open{
+        right: 0;
     }
     .main-info{
         display: flex;

@@ -126,3 +126,22 @@ function handleScrollAnimation(){
 
 window.addEventListener('scroll', handleScrollAnimation);
 handleScrollAnimation();
+
+const hamBtn = document.getElementById('ham');
+const menuBar = document.getElementById('ham-nav-menu');
+
+function makeMenuVisible(event){
+    event.stopPropagation();
+    menuBar.classList.toggle('open');
+}
+
+function closeMenu(event){
+    var clickedInsideMenu = menuBar.contains(event.target);
+    var clickedOnButton = hamBtn.contains(event.target);
+    if (!clickedInsideMenu && !clickedOnButton) {
+        menuBar.classList.remove('open');
+    }
+}
+
+hamBtn.addEventListener('click',makeMenuVisible);
+document.addEventListener('click',closeMenu)
