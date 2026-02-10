@@ -591,6 +591,13 @@ header{
     #next{
         left: 80%;
     }
+    .about-section{
+        margin-top: 60px;
+    }
+    .about-section h1{
+        font-size: 30px;
+        max-width: 300px;
+    }
     .info-cards{
         display: flex;
         flex-direction: column;
@@ -611,6 +618,9 @@ header{
     }
     .sub-form-header{
         padding-left: 0px;
+    }
+    .sub-form input{
+        padding: 10px 0px;
     }
     .social-media-nav{
     padding: 0px 40px;
