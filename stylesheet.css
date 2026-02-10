@@ -213,7 +213,7 @@ header{
     transition: 0.3s;
 }
 #next:hover{
-    transform: scale(1.2);
+    text-shadow: 0 0 15px white, 0 0 40px #0ff;
 }
 
 /*ABOUT SECTION*/
