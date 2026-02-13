@@ -5,11 +5,11 @@ function loadingFunction(){
 
 window.addEventListener("load", loadingFunction);
 document.write(`<div id="welcome-msg">Welcome</div>`);
-var videoList = ['1.webm','2.webm','3.webm']
-var titleList = ['The Shining Moon','The Worlds end','The Destroyer'];
+let videoList = ['1.webm','2.webm','3.webm']
+let titleList = ['The Shining Moon','The Worlds end','The Destroyer'];
 let reserveVideos = ['4.webm','5.webm'];
 let reserveTitles = ['Butterfly Garden','Cyberpunk'];
-counter = 0;
+let counter = 0;
 let jsObject = {name:"JOTF", creator:"Sarvansh Mishra", version: 1.0};
 
 document.getElementById('credentials').textContent = "Creator: "+jsObject.creator;
@@ -49,13 +49,13 @@ function printVideoList(){
     }
 }
 
-function getInput(){
+function getInput(event){
     event.preventDefault();
     const fileName = document.getElementById('file-name').value;
     const title = document.getElementById('Title').value;
     if(!fileName.endsWith('.webm')){
         window.alert("Error in File Extension");
-        form.reset();
+        document.getElementById('form').reset();
         fileNameTextBox.focus();
         return;
     }
@@ -74,7 +74,7 @@ function getInput(){
         }
         else{
             alert("The entry has beeen cancelled");
-            form.reset();
+            document.getElementById('form').reset();
             showCurrentlyAddedVideos();
             return;
         }
