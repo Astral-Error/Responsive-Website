@@ -3,11 +3,16 @@ function loadingFunction(){
     setTimeout(()=>loader.classList.add("hide"), 500);
 }
 
-window.addEventListener("load", loadingFunction());
+window.addEventListener("load", loadingFunction);
 document.write(`<div id="welcome-msg">Welcome</div>`);
 var videoList = ['1.webm','2.webm','3.webm']
 var titleList = ['The Shining Moon','The Worlds end','The Destroyer'];
+let reserveVideos = ['4.webm','5.webm'];
+let reserveTitles = ['Butterfly Garden','Cyberpunk'];
 counter = 0;
+let jsObject = {name:"JOTF", creator:"Sarvansh Mishra", version: 1.0};
+
+document.getElementById('credentials').textContent = "Creator: "+jsObject.creator;
 
 function showCurrentlyAddedVideos(){
     let allData="";
@@ -51,11 +56,11 @@ function getInput(){
     if(!fileName.endsWith('.webm')){
         window.alert("Error in File Extension");
         form.reset();
+        fileNameTextBox.focus();
         return;
     }
     else{
         let userConfirm = confirm("Are you sure you want to add "+title+" into the videolist?");
-        let temp = prompt("Enter a tag for this video: ");
         if(userConfirm){
             videoList.push(fileName);
             titleList.push(title);
@@ -90,20 +95,14 @@ function handleScrollAnimation(){
 
     const rect = imageBox.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-
     const progress = 1 - rect.top / windowHeight;
     const clamped = Math.max(0, Math.min(progress, 1));
-
     const startWidth = 360;
     const startHeight = 510;
-
     const endWidth = document.documentElement.clientWidth;
-
     const endHeight = window.innerHeight * 1.0;
-
     const newWidth  = startWidth  + (endWidth  - startWidth)  * clamped;
     const newHeight = startHeight + (endHeight - startHeight) * clamped;
-
     imageBox.style.width  = newWidth  + "px";
     imageBox.style.height = newHeight + "px";
 }
@@ -119,6 +118,12 @@ function closeMenu(event){
     if (!clickedInsideMenu && !clickedOnButton) {
         menuBar.classList.remove('open');
     }
+}
+
+function addRest(){
+    videoList.push(...reserveVideos.slice());
+    titleList.push(...reserveTitles.slice());
+    showCurrentlyAddedVideos();
 }
 
 const button = document.getElementById('next');
@@ -146,3 +151,6 @@ const menuBar = document.getElementById('ham-nav-menu');
 
 hamBtn.addEventListener('click',makeMenuVisible);
 document.addEventListener('click',closeMenu);
+
+const addNewVideo = document.getElementById('add-new-vid');
+addNewVideo.addEventListener('click',addRest);

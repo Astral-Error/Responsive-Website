@@ -411,6 +411,12 @@ header{
     border: 2px solid black;
     box-shadow: 0 0 15px white;
 }
+#submission-button{
+    margin-top: 10px;
+}
+.manipluation-buttons{
+    margin-bottom: 30px;
+}
 
 /*FOOTER SECTION*/
 .footer{
@@ -535,6 +541,10 @@ header{
     transition: color 0.3s ease;
 }
 .footer-navlinks a:hover{
+    color: white;
+}
+
+#credentials{
     color: white;
 }
 
